@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1d4350; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a43931,
+    #1d4350
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a43931,
+    #1d4350
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headerText > p {
+  font-size: 1.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btnBg {
+  background-color: #1abc9c;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btnBg:hover {
+  background-color: #148f77;
+  color: #fff;
+}
+
+.btnBg:focus {
+  background-color: #1abc9c;
+  box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.5);
+}
+
+.inputControl {
+  width: 85%;
+  height: 45px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btnControl {
+  width: 13%;
+}
+
+.litsItem {
+  border-bottom: 1px solid #ccc;
+}
+
+h4 {
+  overflow-wrap: break-word;
+  max-width: 900px;
+}
+
+.btn-warning-white,
+.btn-warning-white:hover,
+.btn-warning-white:focus,
+.btn-warning-white:active {
+  color: #fff;
+}
+
+.btn-warning-white:disabled {
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.btnsMarginFix {
+  margin: auto 11px;
+}
+
+.btnControlUpdate {
+  margin-left: 22px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+@media screen and (max-width: 994px) {
+  .inputControl {
+    width: 75%;
+  }
+
+  .btnControl {
+    width: 20%;
+  }
+  .flexColumn {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 400px) {
+  .headerText > p {
+    font-size: 1.2em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .inputControl {
+    width: 100%;
+  }
+
+  .btnControl {
+    width: 50%;
+    margin: 10px auto;
   }
 }
